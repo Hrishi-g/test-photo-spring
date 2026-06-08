@@ -1,0 +1,256 @@
+/* 1. Layout & Wrapper */
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  /* margin-top: 5rem; */
+}
+
+/* 2. Glassmorphism Card */
+.signup-card {
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); 
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(255, 154, 158, 0.4);
+  max-width: 480px;
+  color: #2d3436; /* Darker text for readability on pink background */
+}
+
+/* 3.  & Typography */
+.signup-card .card-header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #c44569; /* Deep Rose heading */
+}
+
+.signup-card .card-header p {
+  color: #57606f;
+  margin-top: 0.5rem;
+}
+
+/* 4. Form Structure */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.4rem;
+}
+
+.signup-card .form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4b4b4b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 5. Inputs & Focus States */
+.signup-card input {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+  color: #2d3436;
+}
+
+.signup-card input:focus {
+  outline: none;
+  border-color: #ff758c; 
+  background: white; 
+  box-shadow: 0 0 0 4px rgba(255, 117, 140, 0.2); 
+  transition: all 0.2s ease-in-out;
+}
+
+input[aria-invalid="true"] {
+  border-color: #dc2626;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+/* 6. Primary Action Button */
+.signup-btn {
+  padding: 1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #ff758c;
+  color: white; 
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.signup-btn:hover:not(:disabled) {
+  background: #ffffff;
+  color: #ff758c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 117, 140, 0.25);
+}
+.signup-btn:hover {
+  border-color: #ff758c;
+}
+.signup-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 7. Messages & Errors */
+.message-box {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.message-box.success {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
+}
+
+.message-box.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+.error-text {
+  color: #dc2626;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.required-star {
+  color: #dc2626;
+}
+
+/* 8. Success Screen */
+.success-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #dcfce7;
+  color: #166534;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.login-button-large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background-color: #ff758c;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.login-button-large:hover {
+  background-color: #ff5e78;
+  transform: scale(1.05);
+}
+
+/* 9. Navigation Links */
+.login-link {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #ff758c; /* Match pink theme */
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 0.4rem;
+  text-decoration: underline;
+}
+
+/* 10. Mobile Responsive */
+@media (max-width: 640px) {
+  .form-row {
+    flex-direction: column;
+  }
+  .signup-card {
+    padding: 1.5rem;
+  }
+}
+
+/* 5. Inputs & Focus States */
+input[aria-invalid="true"] {
+  /* Create a pink gradient "flow" effect */
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.9) 0%, 
+    rgba(255, 117, 140, 0.2) 50%, 
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  background-size: 200% 100%;
+  border-color: #ff758c; /* Keep the border pink instead of red */
+  
+  /* Trigger the animation */
+  animation: pinkFlow 1.5s ease-out forwards;
+}
+
+/* The Flow Animation */
+@keyframes pinkFlow {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+    /* Returns to a standard white-ish background at the end */
+    background-color: rgba(255, 255, 255, 0.9); 
+  }
+}

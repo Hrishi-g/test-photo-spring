@@ -1,0 +1,90 @@
+.glass-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  /* Updated background to a slightly pinkish-white tint */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-logo {
+  /* Changed from pure white to match your card header rose color */
+  color: #c44569; 
+  font-size: 1.5rem;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: -0.5px;
+}
+
+.company-logo span {
+  /* Matching the pink theme accent */
+  color: #ff758c;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.nav-action-btn {
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.95);
+  /* Changed color from Blue to Pink */
+  color: #ff758c; 
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(255, 117, 140, 0.15);
+  outline: none;
+}
+
+.nav-action-btn:focus {
+  outline: none !important;
+  /* Pink glow focus ring */
+  box-shadow: 0 0 0 3px rgba(255, 117, 140, 0.4); 
+}
+
+.nav-action-btn:focus-visible {
+  outline: 2px solid #ff758c;
+  outline-offset: 2px;
+}
+
+/* Hover State */
+.nav-action-btn:hover {
+  background: #ffffff;
+  /* Deep Pink on hover */
+  color: #ff5e78;
+  transform: translateY(-2px);
+  /* Pink-tinted shadow on hover */
+  box-shadow: 0 8px 20px rgba(255, 117, 140, 0.3);
+}
+.logout-style {
+  background-color: #ffeded;
+  color: #e74c3c;
+  border: 1px solid #ffccd2;
+}
+.nav-action-btn:active {
+  transform: translateY(0);
+}
+.app-container {
+  padding-top: 70px; 
+}

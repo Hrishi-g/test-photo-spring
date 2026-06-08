@@ -1,0 +1,231 @@
+/* 1. Wrapper */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* 2. Romantic Glass Card */
+.login-card {
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); 
+  
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* Updated shadow to match pink theme */
+  box-shadow: 0 8px 32px 0 rgba(255, 154, 158, 0.4); 
+  
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: 480px;
+  max-width: 100%;
+  color: #2d3436; /* Darker text for readability */
+}
+
+/* 3. Header Styling - Matching Signup */
+.card-header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #c44569; /* Deep Rose heading */
+}
+
+.card-header p {
+  color: #57606f; /* Muted contrast text */
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* 4. Form Layout */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4b4b4b; /* Darker labels */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 5. Input Styling - Fixed focus and colors */
+input {
+  padding: 0.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #2d3436;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus {
+  outline: none !important;
+  border-color: #ff758c; /* Pink focus border */
+  background: white;
+  box-shadow: 0 0 0 4px rgba(255, 117, 140, 0.2); /* Pink glow */
+}
+
+input[aria-invalid="true"] {
+  border-color: #dc2626;
+}
+
+/* 6. Password Field and Toggle */
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 7. Modernized Login Button - Removing Blue and using Pill Shape */
+.login-btn {
+  background: #ff758c; /* Theme Pink */
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 1rem;
+  border-radius: 50px; /* Modern Pill shape */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.login-btn:hover:not(:disabled) {
+  background: #ffffff;
+  color: #ff758c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 117, 140, 0.3);
+  outline: none;
+}
+.login-btn:hover {
+  border-color: #ff758c;
+}
+
+/* Force removal of any lingering blue outline */
+.login-btn:focus, .login-btn:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 4px rgba(255, 117, 140, 0.4);
+}
+
+.login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 8. Links and Footer */
+.signup-link {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #ff758c; /* Changed from Blue to Pink */
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 0.4rem;
+  text-decoration: underline;
+}
+
+.link-button:hover {
+  color: #ff5e78;
+}
+
+/* 9. Message Boxes */
+.message-box {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.message-box.success {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
+}
+
+.message-box.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+.required-star {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+/* 10. Responsiveness */
+@media (max-width: 640px) {
+  .login-card {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .card-header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* 5. Inputs & Focus States */
+input[aria-invalid="true"] {
+  /* Create a pink gradient "flow" effect */
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.9) 0%, 
+    rgba(255, 117, 140, 0.2) 50%, 
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  background-size: 200% 100%;
+  border-color: #ff758c; /* Keep the border pink instead of red */
+  
+  /* Trigger the animation */
+  animation: pinkFlow 1.5s ease-out forwards;
+}
+
+/* The Flow Animation */
+@keyframes pinkFlow {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+    /* Returns to a standard white-ish background at the end */
+    background-color: rgba(255, 255, 255, 0.9); 
+  }
+}
